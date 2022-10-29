@@ -18,6 +18,8 @@ Users run functional nodes to earn money from idle arithmetic. Function nodes in
 
 BridgeFabric maintains stability and reputation values for each function node, so that users can choose a node to run based on various considerations. (Stability and reputation system is under development)
 
+Worker node is developed based on dapr.
+
 #### Actor Code
 
 Actor code is in WebAssembly binary format and is stored in distributed storage system. We are currently supporting Filecoin and IPFS as actor code storage.
