@@ -2,7 +2,7 @@ BridgeFabric is a decentralized serverless platform.
 
 ### General Introduction
 
-BridgeFabric is a distributed serverless system based on web3. It aims to build an easy-to-use decentralized governance serverless system, making every piece of function code generates value. Developers will write applications as WebAssembly, and dapr hosts the running of WebAssembly applications. dapr nodes use libp2p to discover and communicate with each other, and each dapr node has a unique identity, a nodeid, and dapr nodes that want to join the system to host applications need to stack first. Which dapr nodes are allowed to participate in the system, and which WebAssembly applications these nodes can run are determined by the on-chain governance contract. Users can write or select the applications they need to use and only need to pay for each call they make. webAssembly binary applications will be stored on ipfs.
+BridgeFabric is a distributed serverless system based on web3. It aims to build an easy-to-use decentralized governance serverless system, making every piece of function code generates value. Developers can write applications and compiling it to WebAssembly. Worker node can run these WebAssembly applications which is call actor in this system. Worker nodes use libp2p to discover and communicate with each other, and each worker node has a unique identity, a nodeid. Worker nodes need to stake and then they can join the system to host applications to earn. Which worker nodes are allowed to participate in the system, and which actor these nodes can host are determined by the on-chain governance contract. Users can write or select the applications they need to use and only need to pay for each call they make. The webAssembly binary applications is currently supported stored on ipfs.
 
 ### Architecture
 
@@ -41,6 +41,8 @@ The manager node has built-in verification contract, which also verifies the pro
 BridgeFabric's governance contract which is unpluggable. It is currently deployed on polygon. It defines the management logic about this system.
 
 #### Call private logic
+
+![image-20221117193846303](https://image-1255620078.cos.ap-nanjing.myqcloud.com/image-20221117193846303.png)
 
 BridgeFabric supports invoking user-private actors. Some applications that do not want to be hosted on public BridgeFabric worker node or considering about performance reasons, users can register their own node and its corresponding actor in the management contract. This allows the system to support calling private actor hosting on the node and also running by the same user.
 
